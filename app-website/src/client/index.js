@@ -1,14 +1,14 @@
-import 'babel-polyfill';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
-import { renderRoutes } from 'react-router-config';
-import axios from 'axios';
-import Routes from './Routes';
-import reducers from './store/reducers';
+import 'babel-polyfill'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
+import { renderRoutes } from 'react-router-config'
+import axios from 'axios'
+import Routes from './routes'
+import reducers from './store/reducers'
 // Set a axios instance for all api requests
 const axiosInstance = axios.create({
   baseURL: '/api'

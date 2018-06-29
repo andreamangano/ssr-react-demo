@@ -1,8 +1,8 @@
 import {
   FETCH_RESOURCES,
   FETCH_SINGLE_RESOURCE,
-} from '../actions';
-import update from 'immutability-helper';
+} from '../actions'
+import update from 'immutability-helper'
 
 export default (state = {}, action) => {
   switch (action.type) {

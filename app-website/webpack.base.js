@@ -12,7 +12,7 @@ module.exports = {
             ['env', { targets: { browsers: ['last 2 versions'] } }]
           ],
           plugins: [
-            'transform-class-properties',
+            'transform-class-properties'
           ]
         }
       }

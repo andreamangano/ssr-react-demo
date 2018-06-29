@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   BaseStyled,
   TitleStyled,
+  DetailsStyled,
   AbstractStyled,
-} from './styled';
+} from './styled'
 
 class ResourceCard extends Component {
 
@@ -18,9 +19,8 @@ class ResourceCard extends Component {
     return (
       <BaseStyled>
         <TitleStyled>{title}</TitleStyled>
-        <div>{author}</div>
-        <div>{type}</div>
-        <AbstractStyled>{abstract}</AbstractStyled>
+        <DetailsStyled>{type} by {author}</DetailsStyled>
+        <AbstractStyled>{abstract.replace(/^(.{200}[^\s]*).*/, '$1')}...</AbstractStyled>
       </BaseStyled>
     )
   }

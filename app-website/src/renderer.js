@@ -1,11 +1,11 @@
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { renderRoutes } from 'react-router-config';
-import serialize from 'serialize-javascript';
-import { Helmet } from 'react-helmet';
-import Routes from './client/routes';
+import React from 'react'
+import { renderToString } from 'react-dom/server'
+import { StaticRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { renderRoutes } from 'react-router-config'
+import serialize from 'serialize-javascript'
+import { Helmet } from 'react-helmet'
+import Routes from './client/routes'
 import { ServerStyleSheet } from 'styled-components'
 
 // Utility function to render the content of a given route
@@ -31,6 +31,7 @@ export default (req, store, context) => {
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
         ${styleTags}
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet" />
       </head>
       <body>
         <div id="root">${content}</div>

@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
-import { fetchResources } from '../../store/actions';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { fetchResources } from '../../store/actions'
+import { connect } from 'react-redux'
 import {
   ResourceCard
-} from '../../components';
+} from '../../components'
+import {
+  BaseStyled,
+  TitleStyled,
+} from './styled'
 
 class Home extends Component {
 
@@ -25,21 +29,22 @@ class Home extends Component {
     } = this;
 
     return (
-      <div>
-        <h3>Welcome to the React SSR Demo</h3>
+      <BaseStyled>
+        <TitleStyled>React SSR Sample App</TitleStyled>
         <ul>
           {
             resources.map(r => (
               <div
                 key={r.slug}
                 onClick={() => navigateToResourceDetail({ slug: r.slug })}
+                style={{ marginTop: '20px' }}
               >
                 <ResourceCard {...r} />
               </div>
             ))
           }
         </ul>
-      </div>
+      </BaseStyled>
     );
   }
 }

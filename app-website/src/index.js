@@ -1,19 +1,19 @@
-import 'babel-polyfill';
+import 'babel-polyfill'
 
 // Load development env
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').load();
 }
 
-import express from 'express';
-import { matchRoutes } from 'react-router-config';
-import proxy from 'express-http-proxy';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import axios from 'axios';
-import reducers from './client/store/reducers';
-import Routes from './client/Routes';
-import renderer from './renderer';
+import express from 'express'
+import { matchRoutes } from 'react-router-config'
+import proxy from 'express-http-proxy'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import axios from 'axios'
+import reducers from './client/store/reducers'
+import Routes from './client/Routes'
+import renderer from './renderer'
 
 const PORT = process.env.PORT || 3000;
 const app = express();

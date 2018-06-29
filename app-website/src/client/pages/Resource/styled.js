@@ -1,35 +1,35 @@
 import styled, { css } from 'styled-components'
 import { typographyStyles } from '../../styles'
 
-const base = css`
-  padding: 20px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #e5ded7;
-  border-radius: 5px;
- 
-  &:hover {
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.05);
-  }
-`;
+const base = css``;
 
 const title = css`
-  ${typographyStyles.h4}
+  ${typographyStyles.h1}
   color: #212121;
 `;
 
 const details = css`
-  ${typographyStyles.small}
-  margin-top: 5px;
+  margin-top: 15px;
 `;
 
 const abstract = css`
-  ${typographyStyles.small}
+  ${typographyStyles.body}
   color: #8e8a87;
-  margin-top: 10px;
+  margin-top: 30px;
+`;
+const link = css`
+  ${typographyStyles.body}
+  color: #8e8a87;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 15px;
 `;
 
 export const BaseStyled = styled.div`${base}`;
 export const TitleStyled = styled.h4`${title}`;
 export const DetailsStyled = styled.div`${details}`;
 export const AbstractStyled = styled.p`${abstract}`;
+export const LinkStyled = styled.a`${link}`;

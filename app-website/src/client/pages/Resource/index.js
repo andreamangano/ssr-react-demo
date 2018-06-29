@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
-import { fetchSingleResource } from '../../store/actions';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { fetchSingleResource } from '../../store/actions'
+import { connect } from 'react-redux'
+import {
+  BaseStyled,
+  TitleStyled,
+  DetailsStyled,
+  AbstractStyled,
+  LinkStyled,
+} from './styled'
 
 class Resource extends Component {
 
@@ -21,15 +28,23 @@ class Resource extends Component {
     return (
       <div>
         {
-          !resource &&
-          <div>Loading</div>
+          !resource && <div>Loading...</div>
         }
         {
           resource &&
-          <div>
-            <h3>{resource.title}</h3>
-            <p>{resource && resource.abstract}</p>
-          </div>
+          <BaseStyled>
+            <TitleStyled>{resource.title}</TitleStyled>
+            <DetailsStyled>
+              {resource.type} by {resource.author}
+            </DetailsStyled>
+            {
+              resource.abstract &&
+              <AbstractStyled>{resource.abstract}</AbstractStyled>
+            }
+            <LinkStyled href={resource.link} target="blank">
+              Go to resource
+            </LinkStyled>
+          </BaseStyled>
         }
       </div>
     );
